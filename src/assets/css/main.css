@@ -1,0 +1,288 @@
+@font-face {
+    font-family: arenq;
+    src: url(../fonts/Arenq.otf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../fonts/Oswald-VariableFont_wght.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    background-color: #FEFCF3;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0ecdead;
+    border-bottom: 2px solid #f0ecde;
+} 
+
+#main_title {
+    margin-left: 3rem;
+    font-family: arenq;
+}
+
+#about_link {
+    margin-right: 3rem;
+    outline: 2px;
+    border-bottom: 2px solid transparent;
+    font-family: oswald;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#about_link:hover {
+    color: #2b2b2b;
+    border-bottom-color: #2b2b2b;
+}
+
+a:visited {
+    color: unset;
+}
+
+#welcome_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+#welcome {
+    margin-top:  12rem;
+    padding: .5rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#discover_link {
+    padding: .75rem;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: 2px solid #2b2b2b;
+}
+
+#discover_link:hover {
+    background-color: #f0ecde;
+}
+
+.main-content {
+    margin-top: 5rem;
+    background-color: #FEFCF3;
+}
+
+#add_button {
+    margin: 1rem;
+    margin-left: 2rem;
+    width: 8%;
+    padding: .25rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #2b2b2b;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+#add_button:hover {
+    background-color: #f0ecdead;
+}
+
+.main-content .list{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.marque,
+.modele,
+.annee {
+    font-weight: bold;
+}
+
+.voiture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0ecde;
+}
+
+.info_voiture {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    border-radius: .25rem;
+    text-align: center;
+}
+.marque_voiture {
+    text-transform: uppercase;
+}
+.modele_voiture {
+    text-transform: capitalize;
+}
+
+.voiture_actions {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.voiture_actions a {
+    width: 4rem;
+    text-align: center;
+    border-radius: .25rem;
+}
+.voiture_actions a:hover {
+    background-color: #faefde;
+}
+
+.voiture_actions img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+.details {
+    margin: 3rem auto;
+    padding: 2rem 1.5rem;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 2px solid #f0ecde;
+    border-radius: 1rem;
+}
+
+.details p {
+    display: flex;
+    gap: .5rem;
+    text-transform: capitalize;
+}
+
+.details p span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+form {
+    margin: 3rem auto;
+    padding: 2rem;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid #f0ecde;
+    border-radius: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+form > div {
+    padding: .5rem;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+}
+
+/* border: 2px solid red; */
+
+.erreur {
+    border-color: red;
+}
+
+.field_label,
+legend {
+    font-weight: bold;
+}
+
+form input[type=text],
+form input[type=number] {
+    height: 1.5rem;
+    padding: .25rem;
+    border: 1px solid #f0ecde;
+    border-radius: .25rem;
+}
+
+fieldset {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: .25rem;
+}
+
+fieldset div {
+    flex-direction: row;
+    align-items: center;
+}
+
+fieldset div label {
+    font-weight: normal;
+}
+
+#submit_btn {
+    margin: 0 auto;
+    padding: .25rem;
+    width: 50%;
+    border: 2px solid #f0ecde;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    background-color: #FEFCF3;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#submit_btn:hover {
+    background-color: #f0ecdead;
+}
+
+.about {
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid #f0ecde;
+    border-radius: 1rem;
+}
+
+.about_info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.about_info span {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.description > span {
+    display: block;
+    margin: 1rem;
+    font-weight: bold;
+}

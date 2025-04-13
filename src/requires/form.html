@@ -1,0 +1,144 @@
+<?php
+
+$body = <<<EOT
+<form method="post" action="index.php?action={$cible}&id={$id}">
+
+	<div class="{$erreurs["marque"]}">
+		<label class="field_label" for="marque">Marque</label>
+		<input type="text" name="marque" value="{$marque}" id="marque" placeholder="marque">
+	</div>
+
+	<div class="{$erreurs["modele"]}">
+		<label class="field_label" for="modele">Modele</label>
+		<input type="text" name="modele" value="{$modele}" id="modele" placeholder="modèle">
+	</div>
+
+	<div class="{$erreurs["annee"]}">
+		<label class="field_label" for="annee">Année</label>
+		<input type="number" name="annee" value="{$annee}" id="annee" placeholder="année" min="1900" max="2023">
+	</div>
+	
+	<div class="{$erreurs["energie"]}">
+		<fieldset>
+			<legend>Energie</legend>
+			<div>
+				<input type="radio" name="energie" id="gasoil" value="gasoil">
+				<label for="gasoil">gasoil</label>
+			</div>
+			<div>
+				<input type="radio" name="energie" id="essence" value="essence">
+				<label for="essence">essence</label>
+			</div>
+			<div>
+				<input type="radio" name="energie" id="hybride" value="hybride">
+				<label for="hybride">hybride</label>
+			</div>
+			<div>
+				<input type="radio" name="energie" id="electrique" value="electrique">
+				<label for="electrique">électrique</label>
+			</div>
+			<div>
+				<input type="radio" name="energie" id="autre" value="autre">
+				<label for="autre">autre</label>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="{$erreurs["puissance"]}">
+		<label class="field_label" for="puissance">Puissance</label>
+		<input type="number" name="puissance" value="{$puissance}" id="puissance" placeholder="puissance" min="0" max="999">
+	</div>
+	
+	<div class="{$erreurs["puissance_fiscale"]}">
+		<label class="field_label" for="puissance_fiscale">Puissance fiscale</label>
+		<input type="number" name="puissance_fiscale" value="{$puissance_fiscale}" id="puissance_fiscale" placeholder="puissance fiscale" min="0" max="100">
+	</div>
+	
+	<div class="{$erreurs["gearbox"]}">
+		<fieldset>
+			<legend>Boîte de vitesse</legend>
+			<div>
+				<input type="radio" name="gearbox" id="manuelle" value="manuelle">
+				<label for="manuelle">manuelle</label>
+			</div>
+			<div>				
+				<input type="radio" name="gearbox" id="semi-automatique" value="semi-automatique">
+				<label for="semi-automatique">semi-automatique</label>
+			</div>
+			<div>
+				<input type="radio" name="gearbox" id="automatique" value="automatique">
+				<label for="automatique">automatique</label>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="{$erreurs["type"]}">
+		<fieldset>
+			<legend>Type</legend>
+			<div>
+				<input type="radio" name="type" id="citadine" value="citadine">
+				<label for="citadine">citadine</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="berline" value="berline">
+				<label for="berline">berline</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="break" value="break">
+				<label for="break">break</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="monospace" value="monospace">
+				<label for="monospace">monospace</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="coupe" value="coupe">
+				<label for="coupe">coupé</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="tout-terrain" value="tout-terrain">
+				<label for="tout-terrain">tout-terrain</label>
+			</div>
+			<div>
+				<input type="radio" name="type" id="utilitaire" value="utilitaire">
+				<label for="utilitaire">utilitaire</label>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="{$erreurs["cylindree"]}">
+		<label class="field_label" for="cylindree">Cylindrée</label>
+		<input type="number" name="cylindree" value="{$cylindree}" id="cylindree" placeholder="cylindrée">
+	</div>
+
+	<div class="{$erreurs["portes"]}">
+		<label class="field_label" for="portes">Portes</label>
+		<input type="number" name="portes" value="{$portes}" id="portes" placeholder="portes">
+	</div>
+
+	<div class="{$erreurs["motricite"]}">
+		<fieldset>
+			<legend>Motricité</legend>
+			<div>
+				<input type="radio" name="motricite" id="traction" value="traction">
+				<label for="traction">traction</label>
+			</div>
+			<div>
+				<input type="radio" name="motricite" id="propulsion" value="propulsion">
+				<label for="propulsion">propulsion</label>
+			</div>
+			<div>
+				<input type="radio" name="motricite" id="4x4" value="4x4">
+				<label for="4x4">4x4</label>
+			</div>
+		</fieldset>
+	</div>
+
+	<input type="submit" name="validation" value="{$submit_msg}" id="submit_btn">
+
+</form>
+EOT;
+
+$main_content = $body;
+
+?>
